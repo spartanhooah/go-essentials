@@ -26,6 +26,9 @@ func main() {
 	futureValue := investmentAmount * math.Pow(1+expectedReturnRate/100, years)
 	futureRealValue := futureValue / math.Pow(1+inflationRate/100, years)
 
-	fmt.Println(futureValue)
-	fmt.Println(futureRealValue)
+	formattedFV := fmt.Sprintf("Future value without inflation: %.2f\n", futureValue)
+	fmt.Print(formattedFV)
+	fmt.Printf("Future value after inflation: %.2f", futureRealValue)
+
+	// Can use back-ticks for multi-line strings. In this case, \n is printed as \n rather than a line break
 }
